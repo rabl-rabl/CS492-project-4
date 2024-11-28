@@ -32,8 +32,19 @@ python sample.py --category chair|airplane|table
 ```
 After sampling, you will get {category}_combined_data.npy file in samples/{category} folder.
    
-5. 
+5. Train the autoencoder using training voxel dataset.
+```python
+python upsampling_train.py --category chair|airplane|table
+```
+After training, you will get {category}_decoder.ckpt file, which is size of 1000x64x64x64.
 
-n. Train the upsampling network.
-   1) In upscaling_network.py, change the path to the training data to select the category you want to train.
-   2) Run upscaling_network.py
+6. Sample the final output using the ckpt file.
+```python
+python upsampling_sample.py --category chair|airplane|table
+```
+After sampling, you will get {category}_output.npy file.
+
+7. Evaluate by using eval.py.
+```python
+python eval.py chair|airplane|table {category}_output.npy
+```
