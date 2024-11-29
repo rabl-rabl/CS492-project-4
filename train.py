@@ -640,7 +640,7 @@ def main(args):
         'scaler_state_dict': scaler.state_dict(),
         'config': config.toDict(),
         'losses': losses,
-    }, save_dir / f'{category}.ckpt')
+    }, save_dir / f'{category}_ddpm.ckpt')
     print("Saved Final Model Checkpoint")
 
 if __name__ == "__main__":
