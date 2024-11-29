@@ -24,7 +24,7 @@ python downsampling.py --category chair|airplane|table
 ```python
 python train.py --category chair|airplane|table
 ```
-After training, you will get intermediate samples and ckpt file in results/diffusion-voxel-(current_time) folder.
+After training, you will get intermediate sample images and {category}.ckpt file in results/diffusion-voxel-(current_time) folder.
 
 4. Sample 1000x32x32x32 size numpy file using the ckpt file. You should change the checkpoint_path to get proper sample.
 ```python
