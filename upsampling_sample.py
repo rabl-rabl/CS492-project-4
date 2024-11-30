@@ -48,7 +48,7 @@ def main(args):
     category = args.category
 
     # Default number of points for each category
-    default_point = [12500, 4500, 2000]
+    default_point = [12500, 5000, 15000]
     if category == 'chair':
         idx = 0
     elif category == 'airplane':
